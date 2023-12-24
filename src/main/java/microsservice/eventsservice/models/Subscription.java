@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 @Entity(name="subscription")
 @Table(name="subscription")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of="id")
 public class Subscription {
 
