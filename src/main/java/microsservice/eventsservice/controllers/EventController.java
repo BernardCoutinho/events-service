@@ -13,5 +13,17 @@ import java.util.List;
 @RequestMapping("/event")
 public class EventController {
 
+    @Autowired
+    private EventService eventService;
+
+    @GetMapping
+    public List<Event> getAllEvents() {
+        return eventService.getAllEvents();
+    }
+
+    @GetMapping("/upcoming")
+    public List<Event> getUpcomingEvents() {
+        return eventService.getUpcomingEvents();
+    }
 
 }
