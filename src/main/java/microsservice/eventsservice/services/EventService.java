@@ -1,8 +1,11 @@
 package microsservice.eventsservice.services;
 
+import microsservice.eventsservice.dtos.EmailRequestDTO;
 import microsservice.eventsservice.dtos.EventRequestDTO;
+import microsservice.eventsservice.exceptions.EventFullException;
 import microsservice.eventsservice.exceptions.EventNotFoundException;
 import microsservice.eventsservice.models.Event;
+import microsservice.eventsservice.models.Subscription;
 import microsservice.eventsservice.repositories.EventsRepository;
 import microsservice.eventsservice.repositories.SubscriptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
