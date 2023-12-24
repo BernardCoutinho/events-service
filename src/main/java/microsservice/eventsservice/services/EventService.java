@@ -41,7 +41,7 @@ public class EventService {
 
     public Boolean isEventFull(Event event){
         Long registeredParticipantsQuantity = subscriptionRepository.getSubscriptionsQuantityByEvent(event.getId());
-        return event.getMaxParticipants() >= registeredParticipantsQuantity;
+        return event.getMaxParticipants() <= registeredParticipantsQuantity;
     }
 
     public void registerParticipant(String eventId, String participantEmail){
