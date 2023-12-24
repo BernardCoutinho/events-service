@@ -20,6 +20,9 @@ public class EventService {
     @Autowired
     private SubscriptionRepository subscriptionRepository;
 
+    @Autowired
+    private EmailServiceClient emailServiceClient;
+
     public List<Event> getAllEvents(){
         return eventRepository.findAll();
     }
