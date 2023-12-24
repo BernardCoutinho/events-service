@@ -1,4 +1,4 @@
-package model;
+package microsservice.eventsservice.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
