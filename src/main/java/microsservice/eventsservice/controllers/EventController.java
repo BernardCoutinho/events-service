@@ -26,4 +26,14 @@ public class EventController {
         return eventService.getUpcomingEvents();
     }
 
+    @PostMapping
+    public Event createEvent(@RequestBody EventRequestDTO event) {
+        return eventService.createEvent(event);
+    }
+
+    @PostMapping("/{eventId}/register")
+    public void registerParticipant(@PathVariable String eventId, @RequestBody SubscriptionRequestDTO subscriptionRequest) {
+        eventService.registerParticipant(eventId, subscriptionRequest.participantEmail());
+    }
+
 }
